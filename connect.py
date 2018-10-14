@@ -14,7 +14,8 @@ print ("Adjacency matrix of the Graph is :\n")
 arr=reshape(matrix,(n,n))
 print (arr)
 i=0
-while i<n:
+#perform fusion for n-1 vertices
+while i<n-1:
         c=len(matrix);
         j=0
         while j<n and c>1:
