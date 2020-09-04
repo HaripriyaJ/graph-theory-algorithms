@@ -19,7 +19,7 @@ for i in range(n):
             adj_matrix[i][j] = int(input())
             adj_matrix[j][i] = adj_matrix[i][j]
             
-print('\nAdjacency Matrix:\n', adj_matrix)
+print('\n Adjacency Matrix: \n', adj_matrix)
 
 n_components = []
 
@@ -51,7 +51,7 @@ while i < n-1:
             adj_matrix = np.delete(adj_matrix, (j), axis=0)  # axis = 0 implies row deletion 
             adj_matrix = np.delete(adj_matrix, (j), axis=1)  # axis = 1 implies column deletion 
         
-            print("\nMatrix After Fusion:\n", adj_matrix)
+            print("\n Matrix After Fusion: \n", adj_matrix)
             n = n - 1  
             
         else:
@@ -63,12 +63,12 @@ while i < n-1:
     n_components.append(component_vertices)
     
 c = len(adj_matrix)
-print("\nNumber of components: ", c)
+print("\n Number of components: ", c)
 
 # Add disconnected points to component list
 for disjoint_pt in vertices[len(n_components):]:
     n_components.append(set(disjoint_pt))
 
-print('\nThe Following are the Components:'.upper())
+print('\n The Following are the Components:'.upper())
 for index in range(len(n_components)):
     print('Component:', index, ' ', n_components[index])
