@@ -39,7 +39,7 @@ while i < n-1:
         if adj_matrix[i][j] > 0 :  
             
             component_vertices.add(vertices[j])  
-            vertices.remove(vertices[j])  # Remove added vertex
+            vertices.remove(vertices[j])  # Remove fused vertex
             
             for k in range(n):
                 adj_matrix[i][k] = adj_matrix[i][k] or adj_matrix[j][k]   # rows are logical or-ed
@@ -49,18 +49,19 @@ while i < n-1:
 
             # delete column and row of vertices fused
             adj_matrix = np.delete(adj_matrix, (j), axis=0)  # axis = 0 implies row deletion 
-            adj_matrix = np.delete(adj_matrix, (j), axis=1)  # axis=1 implies column deletion 
+            adj_matrix = np.delete(adj_matrix, (j), axis=1)  # axis = 1 implies column deletion 
         
             print("\nMatrix After Fusion:\n", adj_matrix)
-            n = n-1  
+            n = n - 1  
             
         else:
-            j = j+1
+            j = j + 1
  
     i += 1
+    
+    # Adding to the component list
     n_components.append(component_vertices)
     
-
 c = len(adj_matrix)
 print("\nNumber of components: ", c)
 
