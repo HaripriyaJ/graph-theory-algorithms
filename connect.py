@@ -21,7 +21,6 @@ for i in range(n):
             
 print('\nAdjacency Matrix:\n', adj_matrix)
 
-
 n_components = []
 
 # Perform fusion for n-1 vertices
