@@ -17,7 +17,7 @@ adj_matrix = np.zeros((n,n))
 for i in range(n):
     for j in range(n):
         if i > j:  
-            print('Edge between (', vertices[i], ',', vertices[j], ') ? (1-Yes, 0-No): ')
+            print('Edge between (', vertices[i], ',', vertices[j], ') ? (1-Yes, 0-No): ', end='')
             adj_matrix[i][j] = int(input())
             adj_matrix[j][i] = adj_matrix[i][j]
             
