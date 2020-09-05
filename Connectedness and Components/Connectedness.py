@@ -73,4 +73,4 @@ for disjoint_pt in vertices[len(n_components):]:
 
 print('\nThe Following are the Components:'.upper())
 for index in range(len(n_components)):
-    print('Component:', index+1, ' ', n_components[index])
+    print('Component ', index+1, ': ', n_components[index])
