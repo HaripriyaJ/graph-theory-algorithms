@@ -1,4 +1,4 @@
-# graph-theory
+# Graph Theory Algorithms
 -------------------------------------
 Algorithms planned to be implemented:
 -------------------------------------
