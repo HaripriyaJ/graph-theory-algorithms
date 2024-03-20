@@ -1,8 +1,4 @@
 # Graph Theory Algorithms
--------------------------------------
-Algorithms planned to be implemented:
--------------------------------------
-
 
 1) Connectedness and Components
   ------------------------------
